@@ -20,12 +20,21 @@ services:
         paths:
           - /product
         strip_path: true
-  - name: user-service
-    host: user_service
+  - name: customer-service
+    host: customer_service
     port: 4002
     protocol: http
     routes:
-      - name: user-service-routes
+      - name: customer_service-routes
         paths:
-          - /user
+          - /customer
+        strip_path: true
+  - name: mail-service
+    host: mail_service
+    port: 4003
+    protocol: http
+    routes:
+      - name: mail-service-routes
+        paths:
+          - /mail
         strip_path: true
