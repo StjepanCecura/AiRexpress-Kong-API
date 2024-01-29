@@ -2,14 +2,14 @@ _format_version: "2.1"
 _transform: true
 
 services:
-  - name: payment-service
-    host: payment_service
+  - name: receipts-service
+    host: receipts_service
     port: 4000
     protocol: http
     routes:
-      - name: payment-service-routes
+      - name: receipts-service-routes
         paths:
-          - /payment
+          - /receipts
         strip_path: true
   - name: product-service
     host: product_service
